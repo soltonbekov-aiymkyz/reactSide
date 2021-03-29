@@ -69,7 +69,7 @@
 
 
 
-import Countdown from "./components/Countdown/Countdown";
+import Countdown from "./Countdown/Countdown";
 const App = () => {
   const [a, setA] = useState(randomNumber(50));
   const [b, setB] = useState(randomNumber(50));
