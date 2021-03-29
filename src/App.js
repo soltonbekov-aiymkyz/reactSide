@@ -74,6 +74,8 @@ import Countdown from "./Countdown/Countdown";
 const App = () => {
   const [a, setA] = useState(randomNumber(50));
   const [b, setB] = useState(randomNumber(50));
+  
+  const [m, setM] = useState(randomNumber(50));
   const [answer, setAnswer] = useState("?");
   const [countdown, setCountdown] = useState(20);
   function randomNumber(limit) {
@@ -81,9 +83,11 @@ const App = () => {
   }
   function checkAnswer() {
     const c = a + b;
+
     if (c == answer) {
       setA(randomNumber(50));
       setB(randomNumber(50));
+      setM(randomNumber(0))
       setAnswer("?");
       setCountdown(20);
     }
