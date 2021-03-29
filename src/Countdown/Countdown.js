@@ -18,6 +18,7 @@
 
 
 
+
 import { useEffect } from "react";
 import classes from "./Countdown.module.css";
 const Countdown = ({ countdown, setCountdown }) => {
@@ -33,7 +34,4 @@ const Countdown = ({ countdown, setCountdown }) => {
   );
 }
 export default Countdown;
-
-
-
 
