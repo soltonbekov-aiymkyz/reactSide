@@ -69,6 +69,7 @@
 
 
 
+import { useState } from "react";
 import Countdown from "./Countdown/Countdown";
 const App = () => {
   const [a, setA] = useState(randomNumber(50));
