@@ -80,18 +80,12 @@ const App = () => {
   const [c,setC] = useState(randomNumber(50));
   const [answer, setAnswer] = useState("?");
   const [countdown, setCountdown] = useState(5);
-
-  const [down, down] = useState(5);
-
+  const [down, setDown] = useState(5);
   function randomNumber(limit) {
     return Math.round(Math.random() * limit);
   }
   function checkAnswer() {
-    const c = a + b;
-
-    const l = m * n;
-
-
+    const c =  a * b;
     if (c == answer) {
       setA(randomNumber(50));
       setB(randomNumber(50));
@@ -101,9 +95,29 @@ const App = () => {
     else {
       alert("No");
     }
-
-
   }
+
+  function checkAnswer() {
+    const b = m - c; 
+   
+    if (b == answer) {
+      setM(randomNumber(50));
+      setC(randomNumber(50));
+      setAnswer("?");
+      setCountdown(20);
+    }
+    else {
+      alert("No");
+    }
+  }
+
+
+
+
+
+
+
+
   let userInput = null;
   if (countdown > 0) {
     userInput = (
@@ -114,15 +128,28 @@ const App = () => {
     ) 
   }
 
+
+
+
+   
+
+
+
+
+
   return (
     <div className="App">
-      {a} + {b} = {answer}
-
-      {m} * {n} = {answer}
+      {a} * {b} - { c} = {answer} 
+      {m} - {c} = {}
 
       <Countdown countdown={countdown} setCountdown={setCountdown} />
       {userInput}
+
+      <Down down ={down} setDown ={setDown} />
+      <input type="number" value={answer} onChange={({ target }) => setAnswer(target.value)} />
+      <button onClick={() => checkAnswer()}>Ok</button>
     </div>
+    
   );
 }
 export default App;
