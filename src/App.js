@@ -76,11 +76,22 @@ const App = () => {
   const [b, setB] = useState(randomNumber(50));
   const [answer, setAnswer] = useState("?");
   const [countdown, setCountdown] = useState(5);
+
+  const [m, setM] = useState(randomNumber(50));
+  const [n, setN] = useState(randomNumber(50));
+
+
+
+
   function randomNumber(limit) {
     return Math.round(Math.random() * limit);
   }
   function checkAnswer() {
     const c = a + b;
+
+    const c = m * n;
+
+
     if (c == answer) {
       setA(randomNumber(50));
       setB(randomNumber(50));
@@ -100,9 +111,20 @@ const App = () => {
       </>
     ) 
   }
+
+
+
+
+
+
+  
+
   return (
     <div className="App">
       {a} + {b} = {answer}
+
+      {m} * {n} = {answer}
+
       <Countdown countdown={countdown} setCountdown={setCountdown} />
       {userInput}
     </div>
