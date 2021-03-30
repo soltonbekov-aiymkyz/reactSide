@@ -89,7 +89,7 @@ const App = () => {
   function checkAnswer() {
     const c = a + b;
 
-    const c = m * n;
+    const l = m * n;
 
 
     if (c == answer) {
