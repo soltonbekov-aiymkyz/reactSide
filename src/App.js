@@ -71,17 +71,17 @@
 
 import { useState } from "react";
 import Countdown from "./components/Countdown/Countdown";
+import Down from "./components/Down/Down"
 const App = () => {
   const [a, setA] = useState(randomNumber(50));
   const [b, setB] = useState(randomNumber(50));
+  const [m, setM] = useState(randomNumber(50));
+  const [n, setN] = useState(randomNumber(50));
+  const [c,setC] = useState(randomNumber(50));
   const [answer, setAnswer] = useState("?");
   const [countdown, setCountdown] = useState(5);
 
-  const [m, setM] = useState(randomNumber(50));
-  const [n, setN] = useState(randomNumber(50));
-
-
-
+  const [down, down] = useState(5);
 
   function randomNumber(limit) {
     return Math.round(Math.random() * limit);
@@ -101,22 +101,6 @@ const App = () => {
     else {
       alert("No");
     }
-
-
-    if (l == answer) {
-      setA(randomNumber(50));
-      setB(randomNumber(50));
-      setAnswer("?");
-      setCountdown(5);
-    }
-    else {
-      alert("No");
-    }
-
-
-
-
-
 
 
   }
