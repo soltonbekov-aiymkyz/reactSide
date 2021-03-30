@@ -66,9 +66,6 @@
 // export default App;
 
 
-
-
-
 import { useState } from "react";
 import Countdown from "./components/Countdown/Countdown";
 import Down from "./components/Down/Down"
@@ -76,7 +73,7 @@ const App = () => {
   const [a, setA] = useState(randomNumber(50));
   const [b, setB] = useState(randomNumber(50));
   const [m, setM] = useState(randomNumber(50));
-  const [n, setN] = useState(randomNumber(50));
+  // const [n, setN] = useState(randomNumber(50));
   const [c,setC] = useState(randomNumber(50));
   const [answer, setAnswer] = useState("?");
   const [countdown, setCountdown] = useState(5);
@@ -96,7 +93,6 @@ const App = () => {
       alert("No");
     }
   }
-
   function checkAnswer() {
     const b = m - c; 
    
@@ -110,14 +106,6 @@ const App = () => {
       alert("No");
     }
   }
-
-
-
-
-
-
-
-
   let userInput = null;
   if (countdown > 0) {
     userInput = (
@@ -127,16 +115,6 @@ const App = () => {
       </>
     ) 
   }
-
-
-
-
-   
-
-
-
-
-
   return (
     <div className="App">
       {a} * {b} - { c} = {answer} 
