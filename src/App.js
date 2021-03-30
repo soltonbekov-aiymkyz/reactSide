@@ -101,6 +101,24 @@ const App = () => {
     else {
       alert("No");
     }
+
+
+    if (l == answer) {
+      setA(randomNumber(50));
+      setB(randomNumber(50));
+      setAnswer("?");
+      setCountdown(5);
+    }
+    else {
+      alert("No");
+    }
+
+
+
+
+
+
+
   }
   let userInput = null;
   if (countdown > 0) {
@@ -111,13 +129,6 @@ const App = () => {
       </>
     ) 
   }
-
-
-
-
-
-
-  
 
   return (
     <div className="App">
